@@ -1,0 +1,311 @@
+*{
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.social-navbar {
+  background-color: black;
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+}
+
+a{
+  cursor: pointer;
+}
+
+.position{
+  position:absolute;
+  top:40%;
+  left:10%;
+}
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  margin-top: -10px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 120%;
+  width: 100%;
+  background: #000000;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(9) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+.content{
+  font-size: 20px;
+    color: white;
+   
+    padding-left: 150px;
+    padding-top: 350px;
+    font-family: Comic Sans MS;
+}
+
+/* .works{
+  color:white;
+} */
+
+.color{
+  color:white;
+}
+
+/* facebook css */
+
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#inputField {
+  margin: 5% 25% 0% 27%;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: black;
+  font-weight: 500;
+  outline: none;
+  caret-color: rgb(155, 78, 255);
+  transition-duration: .3s;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.userIcon {
+  margin: 5% 25% 0% 27%;
+  position: absolute;
+  fill: rgb(155, 78, 255);
+  width: 12px;
+  top: -23px;
+  left: -15px;
+  opacity: 0;
+  transition: .2s linear;
+}
+
+.usernameLabel {
+  margin: 5% 25% 0% 27%;
+  position: absolute;
+  top: -25px;
+  left: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  transition: .2s linear;
+  opacity: 0;
+}
+
+#inputField:focus ~ .usernameLabel,
+#inputField:valid ~ .usernameLabel {
+  transform: translateX(20px);
+  opacity: 1;
+}
+
+#inputField:focus ~ .userIcon,
+#inputField:valid ~ .userIcon {
+  transform: translateX(20px);
+  opacity: 1;
+}
+
+#inputField:focus,
+#inputField:valid {
+  background-color: #ddd;
+  transition-duration: .3s;
+}
+
+
+
+.facebook-icon{
+  padding: 10% 42% 0% 44%;
+}
+
+a{
+  text-decoration:none;
+}
+
+.extra{
+  color:white;
+}
+
+ /* download button */
+
+
+ .button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #5e6eff;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+.download-btn{
+  padding: 2% 0% 0% 45%;
+}
